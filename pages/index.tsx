@@ -1,3 +1,4 @@
+import Link from 'next/Link'
 import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import styled from '@emotion/styled'
@@ -60,11 +61,16 @@ export default function Home({
 
       <Main>
         <BlogTitle>{title}</BlogTitle>
+        <Link href="/about">
+          <a>about this blog</a>
+        </Link>
         <List>
           {posts.map((post) => (
-            <ListItem key={post.id}>
-              <PostTitle>{post.title}</PostTitle>
-            </ListItem>
+            <Link href="/posts/[id]" as={`/posts/${post.id}`} key={post.id}>
+              <ListItem>
+                <PostTitle>{post.title}</PostTitle>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Main>

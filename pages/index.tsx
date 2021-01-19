@@ -74,6 +74,7 @@ export default function Home({
             </Link>
           ))}
         </List>
+        <FeedbackForm />
       </Main>
     </Container>
   )

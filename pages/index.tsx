@@ -2,6 +2,7 @@ import Link from 'next/Link'
 import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import styled from '@emotion/styled'
+import { FeedbackForm } from '@components/FeedbackForm'
 
 const Container = styled.div`
   min-height: 100vh;
